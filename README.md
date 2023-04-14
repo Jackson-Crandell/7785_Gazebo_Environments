@@ -25,7 +25,20 @@ In order to use this environment, you simply need to:
 
 ### Lab 5 Instructions [WIP]
 
-### Lab 6 Instructions [WIP]
+### Lab 6 Instructions 
+
+1. Copy the `turtlebot3_maze.launch.py` file to `/path/to/turtlebot3_simulations/turtlebot3_gazebo/launch` folder
+2. Copy the `maze_world_7785` folder to `/path/to/turtlebot3_simulations/turtlebot3_gazebo/worlds`
+3. Copy the folders in the `maze_models` directory (i.e. 3ft_wall, sign_right2, etc.)  into the `/.gazebo/models/` folder
+4. Go to ros2_ws and rebuild `colcon build --symlink-install`
+4. The `sim_images` folder contains images of the signs in simulation these can be used to train a classifer. 
+
+Finally to run the environment, ensure that your workspace is properly sourced and run the following command:
+```
+ros2 launch turtlebot3_gazebo turtlebot3_maze.launch.py
+```
+
+Note: the `/.gazebo` folder is a *hidden* folder. It is most likely in your `/home` folder. Using Nautilus, you can use `cntrl-h` to view hidden files or in the terminal you can use ls -a. 
 
 
 ## Notes on Gazebo Simulation:
