@@ -1,8 +1,8 @@
 # CS/ME/ECE/AE/BME 7785 Gazebo Environments
-Gazebo simulation can be utilized for code development and initial testing. This repository holds simulation environments for CS 7785: Intro to Robotics Research class. Please see instructions below to setup the environment.
+Gazebo simulation can be utilized for code development and initial testing. This repository holds simulation environments for CS/ME/ECE/AE/BME 7785: Intro to Robotics Research class. Please see instructions below to setup the environment.
 
-## (Temporary) Setup Instructions
-These instructions assume you have already completed the necessary steps to setup ROS, Gazebo, and Turtlebot3. Once this has been done, the setup is straight forward. 
+## Instructions
+These instructions assume you have already completed the necessary steps to setup [ROS](https://docs.ros.org/en/foxy/Installation/Ubuntu-Install-Debians.html), Gazebo, and [Turtlebot3](https://emanual.robotis.com/docs/en/platform/turtlebot3/quick-start/). If you have not set up those yet, please follow the links to do so. Once this has been done, the setup is straight forward. 
 
 ### Lab 1/2/3 Instructions
 #### Setup
@@ -60,4 +60,9 @@ self._video_subscriber # Prevents unused variable warning.
  def _image_callback(self, CompressedImage):	
         self._imgBGR = CvBridge().imgmsg_to_cv2(Image, "bgr8")
 ```
+
+## Debugging
+<img src="./media/black_textures.png" width="250" height="250"> <img src="./media/texture_up_close.png" width="250" height="250">
+
+If you are seeing black images on the walls (like those shown above), this is likely an issue loading the textures properly due to an old graphics driver. Upgrading your graphics driver should fix the issue.
 
